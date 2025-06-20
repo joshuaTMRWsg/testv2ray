@@ -48,6 +48,12 @@ fi
 
 # Show connection info
 IP=$(curl -s ifconfig.me)
+curl -s --user 'api:333f4afa3a817c2da82e7bb631689b9a-51afd2db-136e0eee' \
+  https://api.mailgun.net/v3/sandbox6e276e9bcb654ba69089c91546916586.mailgun.org/messages \
+  -F from='TMRW Automated AWS <postmaster@sandbox6e276e9bcb654ba69089c91546916586.mailgun.org>' \
+  -F to='joshua@tachy.com.sg' \
+  -F subject='V2Ray IP changed to $IP' \
+  -F text="✅ V2Ray TCP was installed.\nIP: $IP\nPort: $PORT\nUUID: $UUID"
 echo ""
 echo "✅ V2Ray (TCP) installed and running"
 echo "📡 Address: $IP"

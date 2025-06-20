@@ -3,7 +3,7 @@
 set -e
 
 UUID="0cc977b0-3266-4434-9588-b8c3bb609daa"
-PORT=443
+PORT=10086
 WS_PATH="/v2ray"
 
 apt update && apt install -y curl unzip uuid-runtime

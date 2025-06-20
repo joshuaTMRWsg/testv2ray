@@ -55,3 +55,4 @@ echo "📦 Port: $PORT"
 echo "🔐 UUID: $UUID"
 echo "🌐 Network: tcp"
 echo "🛡️ TLS: false"
+export IP=$(curl -s ifconfig.me)
